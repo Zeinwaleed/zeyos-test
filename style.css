@@ -230,6 +230,7 @@ a {
 }
 body {
     margin: 0; /* Remove default margin */
+    background-color: var(--background);
   }
   
   main {
@@ -474,7 +475,6 @@ main span {
   background-color: var(--background);
   font-family: 'Fira Sans', sans-serif;
   padding-top: 40px;
-  height: 90vh;
 }
 
 
@@ -748,7 +748,6 @@ main span {
   margin: 0;
   padding: 0;
 
-  min-height: 100vh;
 }
 
 .testimonials-container {
