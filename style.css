@@ -79,19 +79,6 @@ a {
 .header .container{
   max-width: 1120px;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  backdrop-filter: blur(10px);
-  position: fixed;
-  width: 90%;
-  margin: auto;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
 
 /* Logo */
 .logo-container {
@@ -209,6 +196,68 @@ a {
   }
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 105px;
+    left: -100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    flex-direction: column;
+    padding: 20px 0;
+    transition: 0.4s;
+  }
+  .navbar .social-icons{
+    padding: 10px;
+  }
+  .nav-links.active {
+    left: 0;
+    background-color: var(--background);
+    z-index: 1000;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 10px;
+    position: static;
+  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -855,10 +904,10 @@ footer nav ul li a {
   text-decoration: none;
   font-weight: bold;
 }
-.social-icons{
-  padding: 30px;
+.social-icons-footer{
+  padding-top: 30px;
 }
-.social-icons a {
+.social-icons-footer a {
   color: white;
   margin: 0 10px;
   font-size: 20px;
